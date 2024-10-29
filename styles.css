@@ -1,0 +1,206 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3e6141; /* لون خلفية داكن */
+    margin: 0;
+    padding: 20px;
+    color: #333; /* لون النص */
+}
+
+/* تصميم رأس الصفحة */
+header {
+    background-color: #fffcef; /* لون فاتح */
+    color: #3e6141;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 8px; /* زوايا دائرية */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل */
+}
+
+/* تصميم الشعار */
+header img {
+    width: 250px; /* حجم الشعار */
+    margin-bottom: 15px;
+}
+
+/* تصميم شريط التنقل */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fffcef; /* لون النص */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* تأثير التحول */
+}
+
+nav a:hover {
+    color: #388e3c; /* لون عند التحويم */
+    transform: scale(1.1); /* تكبير عند التحويم */
+}
+
+/* تصميم محتوى الصفحة */
+.content {
+    text-align: center;
+    padding: 30px;
+    background-color: #fffcef; /* لون خلفية المحتوى */
+    border-radius: 10px; /* زوايا دائرية أكثر */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل أكبر */
+    margin-bottom: 30px; /* مسافة أكبر */
+}
+
+/* تصميم جدول السلة */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px; /* زيادة padding */
+    text-align: center;
+}
+
+th {
+    background-color: #3e6141; /* لون خلفية العناوين */
+    color: white;
+}
+
+/* تصميم الأزرار */
+button {
+    padding: 12px 25px; /* زيادة padding */
+    background-color: #3e6141;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* تأثير التحول */
+}
+
+button:hover {
+    background-color: #388e3c; /* لون عند التحويم */
+    transform: translateY(-2px); /* تحريك للأعلى عند التحويم */
+}
+
+/* تصميم تذييل الصفحة */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 0.9em; /* حجم خط أصغر */
+}
+
+/* تصميم الروابط في التذييل */
+footer a {
+    color: #4caf50; /* لون الروابط */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* خط تحت عند التحويم */
+}
+
+h2 {
+	
+	font-family: Moxa Bestine ;
+	color: #5c735e;
+	font-weight: 300;
+}
+
+@font-face {
+  font-family: Moxa Bestine;
+  src: url('fonts/moxa bestine.woff') format('woff'), 
+       url('fonts/moxa bestine.ttf') format('truetype');
+}
+
+ .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: #3e6141;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .add-to-cart {
+            background-color: white;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .add-to-cart:hover {
+            background-color: #3e6141;
+        }
+                .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product {
+            background: #fffcef;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            width: 200px; /* تحديد عرض المنتج */
+            margin: 10px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: none; /* إخفاء الصور الأولية */
+            opacity: 0; /* إخفاء الصورة */
+            transition: opacity 0.5s ease; /* تأثير الانتقال */
+        }
+        .product img.active {
+            display: block; /* عرض الصورة النشطة */
+            opacity: 1; /* جعل الصورة واضحة */
+        }
+        .button-left, .button-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+            display: none; /* إخفاء الأزرار في البداية */
+        }
+        .button-left {
+            left: 10px;
+        }
+        .button-right {
+            right: 10px;
+        }
+        .product:hover .button-left,
+        .product:hover .button-right {
+            display: block; /* عرض الأزرار عند التمرير */
+        }
+        .add-to-cart {
+            background-color: #3e6141;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .add-to-cart:hover {
+            background-color: #5f7861;

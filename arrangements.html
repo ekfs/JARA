@@ -1,0 +1,64 @@
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توزيعات</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="website icon" type="png" href="C:\Users\MI-EXCiTE\Documents\موقع\icons\websiteIcon.png">
+</head>
+<body>
+    <header>
+        <img src="file:///C:/Users/MI-EXCiTE/Documents/%D9%85%D9%88%D9%82%D8%B9/icons/logo.jpg" alt="شعار المتجر">
+        <h1>توزيعات</h1>
+    </header>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="indoor-plants.html">نباتات داخلية</a>
+        <a href="arrangements.html">توزيعات</a>
+        <a href="cards-gifts.html">كروت و تغريسات</a>
+        <a href="cart.html">سلة المشتريات</a>
+    </nav>
+    <div class="content">
+        <h2>توزيعات مميزة للمناسبات</h2>
+        <p>اختيارات رائعة لتزيين مناسباتك.</p>
+    </div>
+    
+    <div class="products">
+        <div class="product">
+            <img src="C:\Users\MI-EXCiTE\Documents\موقع\icons\d390f806-0330-45dd-a537-6c4e2961ebde.jpg" alt="توزيعه" class="active">
+            <img src="C:\Users\MI-EXCiTE\Documents\موقع\icons\be2d61b0-5ff8-43c5-8fc8-50841a875234.jpg" alt="توزيعه">
+            <h3>توزيعه 1</h3>
+            <p> سعر:3 ر.س </p>
+            <button class="add-to-cart">أضف إلى السلة</button>
+            <button class="button-left" onclick="changeImage(this, -1)">&#10094;</button>
+            <button class="button-right" onclick="changeImage(this, 1)">&#10095;</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\MI-EXCiTE\Documents\موقع\icons\b67fbe0e-1d72-4bcf-97e2-4a7aa0107882.jpg" alt="توزيعه" class="active">
+            <img src="C:\Users\MI-EXCiTE\Documents\موقع\icons\a8acb6cf-aa7c-4b37-99ec-53e233b47b4a.jpg" alt="توزيعه">
+            <h3>توزيعه 2</h3>
+            <p>سعر:25 ر.س</p>
+            <button class="add-to-cart">أضف إلى السلة</button>
+            <button class="button-left" onclick="changeImage(this, -1)">&#10094;</button>
+            <button class="button-right" onclick="changeImage(this, 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>حقوق الطبع والنشر &copy; 2024 متجر النباتات</p>
+    </footer>
+
+    <script>
+        function changeImage(button, direction) {
+            const product = button.closest('.product');
+            const images = product.querySelectorAll('img');
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
